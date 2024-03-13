@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/admin.css">
+    <link rel="shortcut icon" href="../static/img/favicon.png" type="image/x-icon">
+    <title>BEM VINDO(A)- ESCOLA LULUZINHA</title>
+</head>
+<body>
+    <header>
+        <nav>
+          <a class="logo"><h5>Bem-vindo diretor(a) {{ nome }}</h5></a>
+          <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+           <ul class="nav-list">
+            <li><a href="{{url_for('login')}}">VOLTAR</a></li>
+            <li><a href="{{url_for('duvidas')}}">DÚVIDAS</a></li>
+            <li><a href="{{url_for('boletim')}}">BOLETIM</a></li>
+          </ul>
+        </nav>
+      </header>
+      <br>
+      <div class="card-container">
+        <div class="card">
+            <a href="{{ url_for('cadastrar_professores')}}"><img src="/static/img/imagem-foda.png.png" alt="Imagem 1"></a>
+            <h3>PROFESSORES</h3>
+            <p>ESSA COR DE FUNDO É SÓ PRA NÃO SE CEGAR</p>
+        </div>
+        <div class="card">
+            <a href="{{ url_for('cadastrar_alunos') }}"><img src="/static/img/imagem-foda.png.png" alt="Imagem 2"></a>
+            <h3>ALUNOS</h3>
+            <p>ESSA COR DE FUNDO É SÓ PRA NÃO SE CEGAR</p>
+        </div>
+      <main></main>
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+</body>
+</html>

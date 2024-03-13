@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/homepage.css">
+    <link rel="shortcut icon" href="../static/img/favicon.png" type="image/x-icon">
+    <title>HOMEPAGE - ESCOLA LULUZINHA</title>
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="flex">
+              <a href="#">
+                <img src="{{ url_for('static', filename='../static/img/favicon.png') }}" alt="Ícone da escola" class="icon-luluzinha">
+            </a>
+                <nav>
+                    <ul>
+                        <li><a href="{{url_for('login_aluno')}}">VER BOLETIM</a></li>
+                        <li><a href="{{ url_for('login') }}">LOGIN</a></li>
+                        <li><a href="{{ url_for('duvidas') }}">DÚVIDAS</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+   
+    <section class="banner"></section>
+
+    <section class="sobre-escola">
+        <div class="container">
+            <h2>Sobre a Escola Luluzinha</h2>
+            <h1>Escola Luluzinha</h1> <br>
+            <p>Nossa Jornada Rumo ao Aprendizado</p>
+            <p>Na Escola Luluzinha, Construimos o Futuro, Educando Corações: Onde Cada Aluno Brilha!</p> <br>
+            <h1>Quem Somos</h1> <br>
+            <p>Nossa escola é formada por um grupo de profissionais altamente capacitados e éticos, que possuem uma
+                ampla gama de especializações e experiências. Cada um de nossos professores está comprometido em fornecer
+                um ambiente de estudo para você explorar seus pensamentos e ideias.</p>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <p>Endereço: Av. Getúlio Vargas, 88 - Monte Castelo</p> <br>
+                    <p>Email: contato@escolaluluzinha.com</p> <br>
+                    <p>Telefone: +55 123 456 789</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Redes Sociais</h3>
+                    <ul>
+                        <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiCw4CPi-yEAxVtppUCHX0pBGYQFnoECAYQAQ&url=https%3A%2F%2Fwww.facebook.com%2Fcrecheescolaluluzinhama%2F%3Flocale%3Dpt_BR&usg=AOvVaw3PxC0sDCMIUQ0JohIm8ubH&opi=89978449" target="_blank">
+                            Facebook</a></li>
+
+                        <li><a href="#">Twitter</a></li>
+
+                        <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiCw4CPi-yEAxVtppUCHX0pBGYQFnoECBIQAQ&url=https%3A%2F%2Fwww.instagram.com%2Fcrecheescolaluluzinha%2F&usg=AOvVaw1-B52gZVVY2HvA9nj0S12o&opi=89978449" target="_blank">
+                            Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+      window.addEventListener("scroll", function(){
+        let header=document.querySelector('#header')
+        header.classList.toggle('rolagem', window.scrollY > 240)
+      })
+    </script>
+</body>
+</html>

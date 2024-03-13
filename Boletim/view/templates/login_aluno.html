@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/login_aluno.css">
+    <link rel="shortcut icon" href="../static/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>LOGIN-ALUNO(A)</title>
+</head>
+<body>
+    
+    <header class="nav">
+        <nav>
+            <ul>
+              <li><a href="{{url_for('homepage')}}">VOLTAR</a></li>
+              <li><a href="{{url_for('duvidas')}}">DÚVIDAS</a></li>
+            </ul>
+          </nav>
+    </header>
+
+    <div class="login-container">
+        <h1>Login</h1>
+        <form>
+            <div class="form-group">
+                <label class="label-estilizada" for="matricula">Matricula:</label>
+                <input type="tel" id="matricula" name="matricula" required>
+            </div>
+            <div class="form-group">
+                <label class="label-estilizada" for="password">Senha:</label>
+                <div style="position: relative;">
+                    <input type="password" id="password" name="password" required>
+                    <span class="toggle-password" onclick="togglePassword()">
+                        <i class="bi bi-eye"></i>
+                        <!-- <img src="../static/img/eye-regular.png" alt="Mostrar Senha" width="20"> -->
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit">Entrar</button>
+            </div>
+            <div class="trocar-senha">
+                <p>Esqueceu sua Senha? <a href="{{url_for('trocar_senha')}}">Clique aqui</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function togglePassword() {
+            var passwordField = document.getElementById('password');
+            var fieldType = passwordField.getAttribute('type');
+
+            if (fieldType === 'password') {
+                passwordField.setAttribute('type', 'text');
+            } else {
+                passwordField.setAttribute('type', 'password');
+            }
+        }
+    </script>
+
+</body>
+</html>

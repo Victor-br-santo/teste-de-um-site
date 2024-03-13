@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/cadastrar_alunos.css">
+    <link rel="shortcut icon" href="../static/img/favicon.png" type="image/x-icon">
+    <title>CADASTRAR ALUNOS - ESCOLA LULUZINHA</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>CADASTRO DE ALUNOS</h2>
+        <form action="{{ url_for('cadastrar_alunos') }}" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="matricula">Matricula:</label>
+            <input type="tel" id="matricula" name="matricula" required>
+
+            <label for="telefone">Telefone(Responsável):</label>
+            <input type="tel" id="telefone" name="telefone" required>
+
+            <label for="data">Data de Nascimento:</label>
+            <input type="date" id="data" name="nascimento" required>
+
+            <label for="endereço">Endereço:</label>
+            <input type="text" id="endereço" name="endereco" required>
+
+            <button type="submit">CADASTRAR</button>
+            <button type="button" onclick="goBack()">VOLTAR</button>
+        </form>
+        <Script src="{{url_for('static', filename='js/script_button.js')}}"></Script>
+</body>
+</html>
